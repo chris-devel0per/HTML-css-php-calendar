@@ -4,6 +4,10 @@
 
 ![image](https://user-images.githubusercontent.com/101336067/157666778-5ca9fd3c-bc5b-4b90-84de-c073cd4e867f.png)
 
+## What's new in the update ?
+
+>In this update you can block dates so they dont apear in the calendar .
+>You can add them in line 5 . Have a look at line 6 so you know how to add dates  
 
 ## How to install it ?
 >Just download it and upload it to you webserver and then it should work 
