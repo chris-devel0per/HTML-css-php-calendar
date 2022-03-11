@@ -6,7 +6,7 @@
 
 ## What's new in the update ?
 
->In this update you can block dates so they dont apear in the calendar .
+>In this update you can block dates so they dont appear in the calendar .
 >You can add them in line 5 . Have a look at line 6 so you know how to add dates  
 
 ## How to install it ?
