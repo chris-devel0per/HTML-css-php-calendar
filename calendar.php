@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <style>
+  <?php 
+  $blocked_dates=array('11-03-2022|09:15','08-03-2022|16:45','08-03-2023|16:45'); //You can add Dates with DD-MM-YYYY|h-i and don't forget the  ' because it has to be a string :)
+  ?>
 
 body{
   font-family: "Open Sans",Helvetica,Arial,sans-serif;
@@ -80,7 +83,36 @@ input[id="1|9:15"]:checked{
       
 
   }
+  echo"\n";
+ 
 
+ for ($i = 0; $i < count($blocked_dates); $i++){
+       $date = explode("|", $blocked_dates[$i]);
+       $year = explode("-", $date[0]);
+       $var= (date("Y")-$year[2])*-1;
+      //  echo $var;
+       $blocked_week= date("W", strtotime($year[2]))+1;
+       if($var>0){
+          for ($a = 0; $a < $var; $a++){
+
+              $blocked_week=intval($blocked_week)+52;
+            };
+          
+       };
+
+        $date2 = $date[0];
+        //Convert the date string into a unix timestamp.
+        $unixTimestamp = strtotime($date2);
+        //Get the day of the week using PHP's date function.
+        $dayOfWeek = date("l", $unixTimestamp);
+        $array = array(1 => 'Monday', 2 => 'Tuesday', 3 => 'Wednesday', 4 => 'Thursday', 5 => 'Friday', 6 => 'Saturday', 7 => 'Sunday');
+        $key = array_search($dayOfWeek, $array);
+        $time=$date[1];
+       echo 'input[id="w'.$blocked_week.'"]:checked ~ table tbody tr td label[for="'.$key.'|'.$time.'"] {'."\n";
+        echo '  display: none !important;'."\n".'    
+      }'."\n";
+ }
+ 
 
   for ($i = 1; $i < 260; $i++){
     $i2=$i+1;
@@ -98,6 +130,8 @@ input[id="1|9:15"]:checked{
       } ';
   }
 
+  
+  
 ?>
 
 </style>
@@ -121,7 +155,7 @@ input[id="1|9:15"]:checked{
     $time_to_add=15*$i;
     $endTime = strtotime("+". $time_to_add." minutes", strtotime($selectedTime));
         for ($a = 1; $a < 8; $a++){
-            echo '<input id="'.$a.'|'.date('H:i', $endTime).'" value="'.$a.'|'.date('H:i', $endTime).'" type="radio" class="inputs-to-hide-time" name="time"/>';
+            echo '<input id="'.$a.'|'.date('H:i', $endTime).'" value="'.$a.'|'.date('H:i', $endTime).'" type="radio" class="inputs-to-hide-time" name="time"/>'."\n";
               }
     }
   
