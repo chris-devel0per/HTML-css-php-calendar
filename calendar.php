@@ -3,7 +3,7 @@
 <style>
   <?php 
   $blocked_dates=array('11-03-2022|09:15','08-03-2022|16:45','08-03-2023|16:45'); 
-  //You can add Dates with DD-MM-YYYY|h-i and don't forget the  ' because it has to be a string :) Example (11-03-2022|09:15)
+  //You can add Dates with DD-MM-YYYY|h-i and don't forget the  ' because it has to be a string :) Example ('11-03-2022|09:15')
   ?>
 
 body{
