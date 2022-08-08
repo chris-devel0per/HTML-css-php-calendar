@@ -1,13 +1,11 @@
 # HTML-css-php-calendar
 
 ## Preview
-
-![image](https://user-images.githubusercontent.com/101336067/157666778-5ca9fd3c-bc5b-4b90-84de-c073cd4e867f.png)
+![image](https://user-images.githubusercontent.com/101336067/183507998-e755cd2d-336d-41af-b893-45c1d038ec19.png)
 
 ## What's new in the update ?
 
->In this update you can block dates so they dont appear in the calendar .
->You can add them in line 5 . Have a look at line 6 so you know how to add dates  
+>The design got changed completly.
 
 ## How to install it ?
 >Just download it and upload it to you webserver and then it should work 
