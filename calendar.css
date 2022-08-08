@@ -1,0 +1,130 @@
+@import url("main.css");
+#main-table{
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin:auto;
+    padding: 1%;
+    text-align: center;
+}
+
+#month-table{
+    border: 0;
+    margin-bottom: 2%;
+    width: 100%;
+    float: left;
+    border-right: solid grey;
+}
+
+#day-table{
+    width: 100%;
+    border: 0;
+    float: left;
+    border-right: solid grey;
+}
+
+#day-head{
+    margin-bottom: 5%;
+}
+
+.radio-hidden{
+    display: none;
+}
+
+#time-picker1{
+    text-align: center;
+    width: 10%;
+    float: left;
+}
+
+#time-picker2{
+    text-align: center;
+    width: 9%;
+    float: left;
+}
+#time-div-desktop{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#time-div-mobile{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+
+    #main-table {
+        width: 95%;
+        height: 97%;
+    }
+    #month-table{
+        width: 100%;
+    }
+    
+    #day-table{
+        width: 100%;
+    }
+  
+    #time-div-desktop{
+        display: none;
+    }
+    #time-div-mobile{
+        margin-left: auto;
+        margin-right: auto;
+        width:  90%;
+        display: block;
+    }
+    #time-picker1{
+        text-align: center;
+        width: 10%;
+        float: left;
+        margin-left: 7%;
+    }
+    
+    #time-picker2{
+        text-align: center;
+        width: 9%;
+        float: left;
+        margin-left: 7%;
+    }
+    #time-picker3{
+        text-align: center;
+        width: 9%;
+        float: left;
+        margin-left: 7%;
+    }
+    #time-picker4{
+        text-align: center;
+        width: 9%;
+        float: left;
+        margin-left: 7%;
+    }
+  }
+
+
+  #button{
+    border: none;
+    color: white;
+    padding: 20px;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center !important;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+
